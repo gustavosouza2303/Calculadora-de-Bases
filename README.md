@@ -29,9 +29,9 @@ Converte um caractere e exibe:
 
 ## 🛠️ Linguagens utilizadas
 
-* HTML
-* CSS
-* JavaScript
+* HTML <img align="center" alt="Gusta-HTML" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg"> 
+* CSS <img align="center" alt="Gusta-CSS" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original.svg"> 
+* JavaScript <img align="center" alt="Gusta-Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
 
 ---
 
