@@ -61,7 +61,8 @@ SPTech - 2026
 
 ## 📸 Preview
 
-<img width="1904" height="946" alt="image" src="https://github.com/user-attachments/assets/abfa7d27-0ce1-4806-89b9-910bc5aa9980" />
+<img width="1903" height="950" alt="image" src="https://github.com/user-attachments/assets/e72474a7-d153-4d74-9384-32ec1fb342d4" />
+
 
 
 
