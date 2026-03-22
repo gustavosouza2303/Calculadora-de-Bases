@@ -1,0 +1,197 @@
+<!-- Criado por Marise Miranda | 2017.1 -->
+<!-- Adaptado por Matheus Matos | 2025.1 -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gustavo's Machine</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/icon/favicon2.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+</head>
+
+<body>
+    <div id="container_header">
+        <div id="header">
+            <img src="./imagens/ferrari.png">
+            <h1 id="titulo">Gustavo's Machine</h1>
+        </div>
+        <ul id="navbar">
+            <li>
+                <a href="https://www.instagram.com/gsa.exe/" id="link">Instagram</a>
+            </li>
+            <li>|</li>
+            <li>
+                <a href="https://github.com/gustavosouza2303" id="link">GitHub</a>
+            </li>
+        </ul>
+
+        
+    </div>
+
+        
+    </div>
+    <div id="container_conversaoPai">
+        <div id="container_conversao">
+            <h1>Conversão de Bases</h1>
+        
+            <h3>Digite um número decimal:</h3>
+            <input id="demo1" type="text" placeholder="Ex: 42" autocomplete="off">
+            <br><br>
+        
+            <h3>Digite um número Octal:</h3>
+            <input id="demo2" type="text" placeholder="Ex: 31" autocomplete="off">
+            <br><br>
+                
+            <h3>Digite um número Hexadecimal:</h3>
+            <input id="demo3" type="text" placeholder="Ex: 2A" autocomplete="off">
+            <br><br>
+        
+            <h3>Digite um número Binário:</h3>
+            <input id="demo4" type="text" placeholder="Ex: 10110011" autocomplete="off">
+            <br><br>
+        
+        
+            <button onclick="converter()" id="botao">Converter</button>
+    
+        </div>
+    
+        <div id="container_ascii">
+        <h1>ASCII Machine</h1>
+
+        <h3>Insira um caractere:</h3> <br>
+        <input id="input_ascii" type="text" placeholder="Digite um caracter" maxlength="1" autocomplete="off">
+        <br><br>
+
+        <button onclick="converterCaracter()" id="botao">Converter</button>
+        <br><br>
+
+        <div id="div_output" class="output"></div>
+    </div>
+</div>
+
+
+<div id="div_extras"></div>
+
+
+<div class="footer">
+    <div class="container_footer">
+        <h4>Feito por Gustavo de Souza | SPTech &copy; 2026</h4>
+    </div>
+
+    <div id="links_footer">
+        <ul id="navbar_footer">
+            <li>
+                <button onclick="extra1()" id="extra">Clique aqui!</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+</body>
+
+</html>
+
+
+<script>
+
+    function converter() {
+        // Decimal
+        let inputDecimal = (Number(demo1.value));
+        let decimal = parseInt(inputDecimal, 10);
+
+         // Octal
+        let inputOctal = Number(demo2.value);
+        let octal = parseInt(inputOctal, 8);
+
+        // Hexadecimal
+        let inputHexadecimal = Number(demo3.value);
+        let hexadecimal = parseInt(inputHexadecimal, 16);
+
+        // Binario
+        let inputBinario = Number(demo4.value);
+        let binario = parseInt(inputBinario, 2);
+
+        if (decimal != ``) {
+            demo1.value = decimal.toString(10);
+            demo2.value = decimal.toString(8);
+            demo3.value = decimal.toString(16);
+            demo4.value = decimal.toString(2);
+
+        } else if (octal != ``) {
+            demo1.value = decimal.toString(10);
+            demo2.value = decimal.toString(8);
+            demo3.value = decimal.toString(16);
+            demo4.value = decimal.toString(2);
+        } else if (hexadecimal != ``) {
+            demo1.value = decimal.toString(10);
+            demo2.value = decimal.toString(8);
+            demo3.value = decimal.toString(16);
+            demo4.value = decimal.toString(2);
+        } else if (binario != ``) {
+            demo1.value = decimal.toString(10);
+            demo2.value = decimal.toString(8);
+            demo3.value = decimal.toString(16);
+            demo4.value = decimal.toString(2);
+        }
+    }
+
+function converterCaracter() {
+
+    div_output.innerHTML = '';
+
+    let caractere = input_ascii.value;
+    let decimal = caractere.charCodeAt();
+    let uni = caractere.charCodeAt(0)
+    let format = uni.toString(16).toUpperCase().padStart(4, '0');
+
+    /*
+    Sistema UTF-8?
+
+    -- TextEncoder().encode(caractere) = Converte o caractere para UTF-8 em bytes resultando em valores octais em um lista (por ex: [226, 130, 172]).
+
+    -- .map(b => b.toString(16).padStart(2, '0')) = Converte os valores recebidos em hexadecimal.
+
+    -- .join(' ') = transforma o array (lista) em uma string.
+
+    */
+    let utf8 = [...new TextEncoder().encode(caractere)]
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join(' ');
+
+    let utf16 = uni.toString(16).toUpperCase().padStart(4, '0');
+
+    if (caractere == '') {
+        div_output.innerHTML = '';
+    } else {
+        div_output.style.display = 'block';
+            
+        div_output.innerHTML += `<b>Decimal: </b> ${decimal} <br>`;
+        div_output.innerHTML += `<b>Binário: </b> ${decimal.toString(2)} <br>`;
+        div_output.innerHTML += `<b>Hexadecimal: </b> ${decimal.toString(16).toUpperCase()}  <br>`;
+        div_output.innerHTML += `<b>Unicode: </b> U+${format.toUpperCase()}  <br>`;
+        div_output.innerHTML += `<b>UTF-8: </b> ${utf8.toUpperCase()} <br>`;
+        div_output.innerHTML += `<b>UTF-16: </b> ${utf16.toUpperCase()} <br>`;
+    }
+}
+
+function extra1() {
+
+    let container = document.getElementById('div_extras');
+
+    container.innerHTML = `
+    <div class="tenor-gif-embed" data-postid="22954713" data-share-method="host" data-aspect-ratio="1" data-width="100%">
+        <a href="https://tenor.com/search/rickroll-gifs">Rick Roll GIF</a>
+    </div>
+    `
+
+    let script = document.createElement('script');
+    script.src = "https://tenor.com/embed.js";
+    script.async = true;
+
+    document.body.appendChild(script);
+}
+</script>
