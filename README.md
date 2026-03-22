@@ -1,10 +1,8 @@
 # 🔢 Base Converter & ASCII Machine
 
-Projeto desenvolvido para conversão de bases numéricas e visualização de códigos de caracteres (ASCII/Unicode), com interface web simples e intuitiva.
+Projeto desenvolvido para conversão de bases numéricas e visualização de códigos de caracteres (ASCII/Unicode)
 
 ---
-
-## 🚀 Funcionalidades
 
 ### 🔁 Conversão de Bases
 
@@ -29,12 +27,6 @@ Converte um caractere e exibe:
 
 ---
 
-### 🎁 Extra
-
-* Botão oculto com surpresa 
-
----
-
 ## 🛠️ Linguagens utilizadas
 
 * HTML
@@ -51,15 +43,6 @@ Este projeto explora conceitos como:
 * Conversão entre bases
 * Codificação de caracteres
 * Unicode vs UTF-8 vs UTF-16
-
----
-
-
-## 📌 Observações
-
-* Projeto focado em aprendizado
-* Interface simples e funcional
-* Pode ser expandido com novas funcionalidades
 
 ---
 
